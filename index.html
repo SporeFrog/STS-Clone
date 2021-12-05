@@ -6,15 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/styles.css">
   <script src="https://kit.fontawesome.com/4bc2c0c0d8.js" crossorigin="anonymous"></script>
+  <script src="/script.js" defer></script>
   <title>Slay the Spire</title>
 </head>
 <body>
   <header>
     <h1>Copy the Spire</h1>
     <ul class="meta-stats">
-    <li>Health: 50/50</li>
-    <li>Gold: 0</li>
-    <li>Level: 1
+    <li>Health: <span class="current-player-hp">50</span>/50</li>
+    <li> Gold: <span class="current-gold">0</span> </li>
+    <li>Level: <span class="current-level">1</span>
     </li>
   </ul>
   <div>
@@ -31,7 +32,7 @@
       <i class="fas fa-walking"></i>
       </div>
       <div class="player-health">
-        50/50
+        <span class="current-player-hp">50</span>/50
       </div>
     </div>
 
@@ -41,13 +42,24 @@
       <i class="fas fa-dragon fa-flip-horizontal"></i>
     </div>
     <div class="enemy-health">
-      50/50
+      <span class="current-enemy-hp">90</span>/90
     </div>
     </div>
   </section>
   <div class="energy-display">
-    Energy: 3/3
+    Energy: <span class="current-energy">3</span>/3
   </div>
   </main>
+  <section class="cardMat">
+    <div class="deck">
+      <div class="cardsInDeck"></div>
+    </div>
+    <div class="hand">
+
+    </div>
+    <div class="discard">
+
+    </div>
+  </section>
 </body>
 </html>
