@@ -13,6 +13,7 @@ const defend = {
 };
 
 const playerDeck = ["not empty"];
+const discardPile = [];
 
 const createStartingDeck = () =>  {
 playerDeck.length = 0;
@@ -26,6 +27,26 @@ for(i=0; i < 10; i++){
 }
 console.log(playerDeck);
 document.querySelector('.cardsInDeck').innerHTML = playerDeck.length;
+document.querySelector('.discard').innerHTML = discardPile.length;
 }
 
 createStartingDeck();
+
+const drawStrike = () => {
+  document.querySelector('.hand').innerHtml += `<div class="card">
+  <h3 class="cardName">
+    Strike
+  </h3>
+  <div class="cardEnergyCost">
+    1
+  </div>
+  <div class="cardImage">
+    <img src="/Images/strike.jpg" alt="a swordfight between knights">
+  </div>
+  <div class="cardText">
+    <p class="cardAttack">Deal 5 Damage</p>
+    <p class="cardBlock"></p>
+    <p class="cardDraw"></p>
+  </div>
+</div>`
+};
