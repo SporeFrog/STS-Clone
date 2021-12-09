@@ -32,8 +32,20 @@ document.querySelector('.discard').innerHTML = discardPile.length;
 
 createStartingDeck();
 
-const drawStrike = () => {
-  document.querySelector('.hand').innerHtml += `<div class="card">
+document.querySelector(".testButton").addEventListener("click", ()=>{
+if(document.querySelector(".hand").childElementCount < 7){
+let newCard = document.createElement('div');
+newCard.setAttribute("class","card");
+newCard.innerHTML = strikeHTML;
+document.querySelector(".hand").appendChild(newCard)
+} else {
+  alert('Your hand is full!')
+}
+
+});
+
+const strikeHTML =
+`
   <h3 class="cardName">
     Strike
   </h3>
@@ -41,12 +53,12 @@ const drawStrike = () => {
     1
   </div>
   <div class="cardImage">
-    <img src="/Images/strike.jpg" alt="a swordfight between knights">
+    🗡
   </div>
   <div class="cardText">
     <p class="cardAttack">Deal 5 Damage</p>
     <p class="cardBlock"></p>
     <p class="cardDraw"></p>
   </div>
-</div>`
-};
+`
+;

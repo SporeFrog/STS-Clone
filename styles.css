@@ -160,10 +160,12 @@ position: relative;
   display:flex;
   justify-content: center;
   align-items: center;
+  gap:1rem;
 }
 .cardImage{
   display: flex;
   justify-content: center;
+  font-size: 4rem;
 }
 .cardImage img{
   width: 60%;
